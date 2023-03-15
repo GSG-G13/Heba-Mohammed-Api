@@ -89,8 +89,17 @@ header {
   color: #9e9e9e;
 }
 
+.ctg {
+  text-transform: capitalize;
+}
+
 .search {
   padding: 40px 0;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.select {
   width: 50%;
   margin: 0 auto;
 }
@@ -103,7 +112,8 @@ header {
   }
 }
 
-.search .search-input {
+.search .search-input,
+.select select {
   border: none;
   outline: none;
   padding: 12px 20px;
@@ -112,6 +122,10 @@ header {
   border-radius: 5px;
   width: 100%;
   box-shadow: 2px 2px 6px #eee, -2px -2px 6px #eee;
+}
+
+.select select {
+  text-transform: capitalize;
 }
 .search .search-input:focus {
   border: 2px solid #555;
@@ -155,24 +169,31 @@ header {
 
 .group .box .image {
   margin-bottom: 15px;
+  width: 285px;
+  height: 190px;
 }
 
 .box .image img {
   max-width: 100%;
+  max-height: 100%;
   border-radius: 5px;
 }
 
-.breef p {
+.brief p {
   font-size: 15px;
 }
 
-.breef p span {
+.brief p span {
   color: #ca1b1b;
   font-weight: bold;
 }
 
 .group .box .content {
   margin: 15px;
+}
+
+.group .box .content .title {
+  font-size: 20px;
 }
 
 .group .box .content .desc {
