@@ -3,7 +3,7 @@ const searchInput = document.querySelector(".search-input");
 const headTitle = document.querySelector(".ctg");
 const selectInput = document.getElementById("sel");
 
-let url = `https://inshorts.deta.dev/news?category=${searchInput.value}`;
+let url = `https://api.codetabs.com/v1/proxy?quest=https://inshorts.deta.dev/news?category=${searchInput.value}`;
 
 // Render Element And Searching
 const handelSearch = (news) => {
