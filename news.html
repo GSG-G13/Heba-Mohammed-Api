@@ -13,7 +13,7 @@
         <img src="./images/logo.png" />
       </div>
       <div class="head">
-        <h1>Technology News</h1>
+        <h1><span class="ctg"></span> News</h1>
         <p>InShorts News</p>
       </div>
     </header>
@@ -25,8 +25,21 @@
           placeholder="Search here..."
         />
       </div>
+      <div class="select">
+        <select id="sel">
+          <option>/</option>
+          <option>business</option>
+          <option>sports</option>
+          <option>world</option>
+          <option>technology</option>
+          <option>startup</option>
+          <option>science</option>
+        </select>
+      </div>
       <div class="group"></div>
     </div>
+    <script src="./js/fetch.js"></script>
+    <script src="./js/dom.js"></script>
     <script src="./js/news.js"></script>
   </body>
 </html>
