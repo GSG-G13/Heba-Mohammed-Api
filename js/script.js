@@ -1,32 +1,42 @@
 const group = document.querySelector(".group");
 const searchInput = document.querySelector(".search-input");
 const apiKey = "a8b5329276ac4f60a90e30b4884c082f";
-const url = `https://newsapi.org/v2/everything?q=tesla&apiKey=${apiKey}`;
+// const url = `https://newsapi.org/v2/everything?q=tesla&apiKey=${apiKey}`;
 
-const xhr = new XMLHttpRequest();
-xhr.onreadystatechange = () => {
-  if (xhr.readyState === 4 && xhr.status === 200) {
-    let response = JSON.parse(xhr.responseText);
-    let news = response.articles;
-    news.forEach((item, i) => {
-      if (i !== 0 && i !== 1) {
-        DOMElement(item);
+
+
+const fetch = (url, cb) => {
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      let response = JSON.parse(xhr.responseText);
+      let news = response.articles;
+      cb(news)
+    }
+  };
+
+  xhr.open("GET", url, true);
+  xhr.send();
+}
+
+fetch(url, (news) => {
+  news.forEach((e) => {
+    DOMElement(e)
+  })
+})
+
+searchInput.addEventListener("input", (e) => {
+  let value = e.target.value.toLowerCase();
+  group.innerHTML = "";
+
+  fetch(url, (news) => {
+    news.forEach((ele) => {
+      if (ele.title.toLowerCase().includes(value)) {
+        DOMElement(ele);
       }
     });
-    searchInput.addEventListener("input", (e) => {
-      let value = e.target.value.toLowerCase();
-      group.innerHTML = "";
-      news.forEach((ele) => {
-        if (ele.title.toLowerCase().includes(value)) {
-          DOMElement(ele);
-        }
-      });
-    });
-  }
-};
-
-xhr.open("GET", url, true);
-xhr.send();
+  })
+});
 
 let DOMElement = (item) => {
   let box = document.createElement("div");
