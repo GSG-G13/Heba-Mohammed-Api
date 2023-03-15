@@ -26,7 +26,7 @@ httpRequest(url, handelSearch);
 
 selectInput.addEventListener("change", (e) => {
   headTitle.textContent = e.target.value;
-  url = `https://api.codetabs.com/v1/proxy?quest=https://inshorts.deta.dev/news?category=${e.target.value}`;
+  url = `https://inshorts.deta.dev/news?category=${e.target.value}`;
   group.innerHTML = "";
   httpRequest(url, handelSearch);
 });
