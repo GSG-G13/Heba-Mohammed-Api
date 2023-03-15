@@ -1,7 +1,7 @@
 const group = document.querySelector(".group");
 const searchInput = document.querySelector(".search-input");
 const apiKey = "a8b5329276ac4f60a90e30b4884c082f";
-// const url = `https://newsapi.org/v2/everything?q=tesla&apiKey=${apiKey}`;
+const url = `https://newsapi.org/v2/everything?q=tesla&apiKey=${apiKey}`;
 
 const xhr = new XMLHttpRequest();
 xhr.onreadystatechange = () => {
