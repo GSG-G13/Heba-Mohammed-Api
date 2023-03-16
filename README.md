@@ -35,6 +35,8 @@ News API is a simple HTTP REST API for searching and retrieving live articles fr
 - open project in vscode, write code . in command line.
 
 --------------------------------------------------------------------------------
+## newsapi video
+[live](https://docs.google.com/presentation/d/1_5ianqkU_SIrhF9Cs4U8h20fkAYDyhBLKmG_w0pdD-E/edit?usp=sharing)
 
 ### Built with ❤️ by :
 - [Mohammed Sallout](https://github.com/MohammedSallout).
